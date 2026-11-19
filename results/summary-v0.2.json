@@ -1,0 +1,1091 @@
+{
+  "note": "Aggregates only. Labels: one past soil-carbon project's signed registry checklists (registration n=22 located rows; issuance n=24). Wide intervals; proof of method, not a benchmark.",
+  "runs": [
+    {
+      "task": "iss",
+      "method": "bm25",
+      "tag": "",
+      "k": null,
+      "corpus_size": 13,
+      "metrics": {
+        "n": 24,
+        "hit@1": 0.667,
+        "hit@1_ci95": [
+          0.467,
+          0.82
+        ],
+        "hit@3": 0.833,
+        "hit@3_ci95": [
+          0.641,
+          0.933
+        ],
+        "hit@5": 0.875,
+        "mrr": 0.773,
+        "hit@1_count": 16,
+        "hit@3_count": 20
+      },
+      "timing": {
+        "index_s": 0.0,
+        "per_item_mean_s": 0.0,
+        "per_item_max_s": 0.0,
+        "total_s": 0.0
+      },
+      "tokens_total": null,
+      "energy": null,
+      "run": "iss-bm25"
+    },
+    {
+      "task": "iss",
+      "method": "embed",
+      "tag": "nomic137m",
+      "k": null,
+      "corpus_size": 13,
+      "metrics": {
+        "n": 24,
+        "hit@1": 0.667,
+        "hit@1_ci95": [
+          0.467,
+          0.82
+        ],
+        "hit@3": 0.875,
+        "hit@3_ci95": [
+          0.69,
+          0.957
+        ],
+        "hit@5": 0.917,
+        "mrr": 0.77,
+        "hit@1_count": 16,
+        "hit@3_count": 21
+      },
+      "timing": {
+        "index_s": 0.17,
+        "per_item_mean_s": 0.01,
+        "per_item_max_s": 0.016,
+        "total_s": 0.4
+      },
+      "tokens_total": null,
+      "energy": null,
+      "run": "iss-embed-nomic137m"
+    },
+    {
+      "task": "iss",
+      "method": "hybrid",
+      "tag": "nomic137m",
+      "k": null,
+      "corpus_size": 13,
+      "metrics": {
+        "n": 24,
+        "hit@1": 0.708,
+        "hit@1_ci95": [
+          0.508,
+          0.851
+        ],
+        "hit@3": 0.875,
+        "hit@3_ci95": [
+          0.69,
+          0.957
+        ],
+        "hit@5": 0.875,
+        "mrr": 0.806,
+        "hit@1_count": 17,
+        "hit@3_count": 21
+      },
+      "timing": {
+        "index_s": 0.16,
+        "per_item_mean_s": 0.01,
+        "per_item_max_s": 0.016,
+        "total_s": 0.4
+      },
+      "tokens_total": null,
+      "energy": null,
+      "run": "iss-hybrid-nomic137m"
+    },
+    {
+      "task": "iss",
+      "method": "judge",
+      "tag": "olmo2-1b",
+      "k": 5,
+      "corpus_size": 13,
+      "metrics": {
+        "n": 24,
+        "hit@1": 0.333,
+        "hit@1_ci95": [
+          0.18,
+          0.533
+        ],
+        "hit@3": 0.542,
+        "hit@3_ci95": [
+          0.351,
+          0.721
+        ],
+        "hit@5": 0.875,
+        "mrr": 0.524,
+        "hit@1_count": 8,
+        "hit@3_count": 13
+      },
+      "timing": {
+        "index_s": 0.87,
+        "per_item_mean_s": 0.745,
+        "per_item_max_s": 1.131,
+        "total_s": 18.7
+      },
+      "tokens_total": 76964,
+      "energy": null,
+      "run": "iss-judge-olmo2-1b"
+    },
+    {
+      "task": "iss",
+      "method": "judge",
+      "tag": "olmo2-7b",
+      "k": 5,
+      "corpus_size": 13,
+      "metrics": {
+        "n": 24,
+        "hit@1": 0.375,
+        "hit@1_ci95": [
+          0.212,
+          0.573
+        ],
+        "hit@3": 0.833,
+        "hit@3_ci95": [
+          0.641,
+          0.933
+        ],
+        "hit@5": 0.875,
+        "mrr": 0.594,
+        "hit@1_count": 9,
+        "hit@3_count": 20
+      },
+      "timing": {
+        "index_s": 0.22,
+        "per_item_mean_s": 1.696,
+        "per_item_max_s": 2.337,
+        "total_s": 40.9
+      },
+      "tokens_total": 76964,
+      "energy": null,
+      "run": "iss-judge-olmo2-7b"
+    },
+    {
+      "task": "iss",
+      "method": "random",
+      "tag": "",
+      "k": null,
+      "corpus_size": 13,
+      "metrics": {
+        "n": 24,
+        "hit@1": 0.083,
+        "hit@1_ci95": [
+          0.023,
+          0.258
+        ],
+        "hit@3": 0.333,
+        "hit@3_ci95": [
+          0.18,
+          0.533
+        ],
+        "hit@5": 0.542,
+        "mrr": 0.294,
+        "hit@1_count": 2,
+        "hit@3_count": 8
+      },
+      "timing": {
+        "index_s": 0.0,
+        "per_item_mean_s": 0.0,
+        "per_item_max_s": 0.0,
+        "total_s": 0.0
+      },
+      "tokens_total": null,
+      "energy": null,
+      "run": "iss-random"
+    },
+    {
+      "task": "iss",
+      "tag": "always-yes",
+      "mode": "always_yes",
+      "threshold": 0.5,
+      "n_pairs": 72,
+      "recall_on_cited_evidence": {
+        "n": 24,
+        "said_yes": 24,
+        "yes_rate": 1.0,
+        "ci95": [
+          0.862,
+          1.0
+        ]
+      },
+      "false_yes_on_unrelated": {
+        "n": 24,
+        "said_yes": 24,
+        "yes_rate": 1.0,
+        "ci95": [
+          0.862,
+          1.0
+        ]
+      },
+      "yes_on_uncited_top_keyword_match": {
+        "n": 24,
+        "said_yes": 24,
+        "yes_rate": 1.0,
+        "ci95": [
+          0.862,
+          1.0
+        ]
+      },
+      "balanced_accuracy_reliable_labels": 0.5,
+      "pairwise_cited_beats_unrelated": 0.5,
+      "pairwise_cited_beats_top_uncited": 0.5,
+      "timing": {
+        "per_pair_mean_s": 0.0,
+        "total_s": 0.0
+      },
+      "tokens_total": null,
+      "energy": null,
+      "run": "judge-iss-always-yes",
+      "calibration": {
+        "n": 48,
+        "brier": 0.5,
+        "ece_5bin": 0.5
+      }
+    },
+    {
+      "task": "iss",
+      "tag": "gptoss20b-local-ref",
+      "mode": "generate",
+      "threshold": 0.5,
+      "n_pairs": 72,
+      "recall_on_cited_evidence": {
+        "n": 24,
+        "said_yes": 13,
+        "yes_rate": 0.542,
+        "ci95": [
+          0.351,
+          0.721
+        ]
+      },
+      "false_yes_on_unrelated": {
+        "n": 24,
+        "said_yes": 1,
+        "yes_rate": 0.042,
+        "ci95": [
+          0.007,
+          0.202
+        ]
+      },
+      "yes_on_uncited_top_keyword_match": {
+        "n": 24,
+        "said_yes": 0,
+        "yes_rate": 0.0,
+        "ci95": [
+          0.0,
+          0.138
+        ]
+      },
+      "balanced_accuracy_reliable_labels": 0.75,
+      "pairwise_cited_beats_unrelated": 0.75,
+      "pairwise_cited_beats_top_uncited": 0.771,
+      "timing": {
+        "per_pair_mean_s": 0.649,
+        "total_s": 46.8
+      },
+      "tokens_total": 49850,
+      "energy": {
+        "available": true,
+        "seconds": 46.76,
+        "mean_system_w": 91.64,
+        "total_j": 4285.1,
+        "idle_w": 91.68,
+        "above_idle_j": 0.0
+      },
+      "run": "judge-iss-gptoss20b-local-ref",
+      "calibration": {
+        "n": 48,
+        "brier": 0.25,
+        "ece_5bin": 0.25
+      }
+    },
+    {
+      "task": "iss",
+      "trained_on": "reg",
+      "tag": "nomic137m-logreg",
+      "mode": "trained_logreg",
+      "weights": [
+        -3.031,
+        -0.369,
+        0.749,
+        3.938,
+        0.185
+      ],
+      "threshold": 0.19,
+      "n_pairs": 72,
+      "recall_on_cited_evidence": {
+        "n": 24,
+        "said_yes": 20,
+        "yes_rate": 0.833,
+        "ci95": [
+          0.641,
+          0.933
+        ]
+      },
+      "false_yes_on_unrelated": {
+        "n": 24,
+        "said_yes": 1,
+        "yes_rate": 0.042,
+        "ci95": [
+          0.007,
+          0.202
+        ]
+      },
+      "yes_on_uncited_top_keyword_match": {
+        "n": 24,
+        "said_yes": 10,
+        "yes_rate": 0.417,
+        "ci95": [
+          0.245,
+          0.612
+        ]
+      },
+      "balanced_accuracy_reliable_labels": 0.895,
+      "pairwise_cited_beats_unrelated": 0.958,
+      "pairwise_cited_beats_top_uncited": 0.792,
+      "timing": {
+        "per_pair_mean_s": 0.028,
+        "total_s": 2.02
+      },
+      "tokens_total": null,
+      "energy": null,
+      "run": "judge-iss-nomic137m-logreg",
+      "calibration": {
+        "n": 48,
+        "brier": 0.131,
+        "ece_5bin": 0.145
+      }
+    },
+    {
+      "task": "iss",
+      "tag": "olmo2-1b-fewshot",
+      "mode": "logprob-fewshot",
+      "threshold": 0.5,
+      "n_pairs": 72,
+      "recall_on_cited_evidence": {
+        "n": 24,
+        "said_yes": 24,
+        "yes_rate": 1.0,
+        "ci95": [
+          0.862,
+          1.0
+        ]
+      },
+      "false_yes_on_unrelated": {
+        "n": 24,
+        "said_yes": 23,
+        "yes_rate": 0.958,
+        "ci95": [
+          0.798,
+          0.993
+        ]
+      },
+      "yes_on_uncited_top_keyword_match": {
+        "n": 24,
+        "said_yes": 24,
+        "yes_rate": 1.0,
+        "ci95": [
+          0.862,
+          1.0
+        ]
+      },
+      "balanced_accuracy_reliable_labels": 0.521,
+      "pairwise_cited_beats_unrelated": 0.5,
+      "pairwise_cited_beats_top_uncited": 0.458,
+      "timing": {
+        "per_pair_mean_s": 0.156,
+        "total_s": 11.2
+      },
+      "tokens_total": 65027,
+      "energy": null,
+      "run": "judge-iss-olmo2-1b-fewshot",
+      "calibration": {
+        "n": 48,
+        "brier": 0.332,
+        "ece_5bin": 0.308
+      }
+    },
+    {
+      "task": "iss",
+      "tag": "olmo2-1b",
+      "mode": "logprob",
+      "threshold": 0.5,
+      "n_pairs": 72,
+      "recall_on_cited_evidence": {
+        "n": 24,
+        "said_yes": 23,
+        "yes_rate": 0.958,
+        "ci95": [
+          0.798,
+          0.993
+        ]
+      },
+      "false_yes_on_unrelated": {
+        "n": 24,
+        "said_yes": 18,
+        "yes_rate": 0.75,
+        "ci95": [
+          0.551,
+          0.88
+        ]
+      },
+      "yes_on_uncited_top_keyword_match": {
+        "n": 24,
+        "said_yes": 23,
+        "yes_rate": 0.958,
+        "ci95": [
+          0.798,
+          0.993
+        ]
+      },
+      "balanced_accuracy_reliable_labels": 0.604,
+      "pairwise_cited_beats_unrelated": 0.625,
+      "pairwise_cited_beats_top_uncited": 0.542,
+      "timing": {
+        "per_pair_mean_s": 0.194,
+        "total_s": 14.0
+      },
+      "tokens_total": 43211,
+      "energy": null,
+      "run": "judge-iss-olmo2-1b",
+      "calibration": {
+        "n": 48,
+        "brier": 0.27,
+        "ece_5bin": 0.113
+      }
+    },
+    {
+      "task": "iss",
+      "tag": "olmo2-7b",
+      "mode": "logprob",
+      "threshold": 0.5,
+      "n_pairs": 72,
+      "recall_on_cited_evidence": {
+        "n": 24,
+        "said_yes": 1,
+        "yes_rate": 0.042,
+        "ci95": [
+          0.007,
+          0.202
+        ]
+      },
+      "false_yes_on_unrelated": {
+        "n": 24,
+        "said_yes": 0,
+        "yes_rate": 0.0,
+        "ci95": [
+          0.0,
+          0.138
+        ]
+      },
+      "yes_on_uncited_top_keyword_match": {
+        "n": 24,
+        "said_yes": 0,
+        "yes_rate": 0.0,
+        "ci95": [
+          0.0,
+          0.138
+        ]
+      },
+      "balanced_accuracy_reliable_labels": 0.521,
+      "pairwise_cited_beats_unrelated": 0.792,
+      "pairwise_cited_beats_top_uncited": 0.583,
+      "timing": {
+        "per_pair_mean_s": 0.301,
+        "total_s": 21.6
+      },
+      "tokens_total": 43211,
+      "energy": null,
+      "run": "judge-iss-olmo2-7b",
+      "calibration": {
+        "n": 48,
+        "brier": 0.356,
+        "ece_5bin": 0.385
+      }
+    },
+    {
+      "task": "reg",
+      "tag": "always-yes",
+      "mode": "always_yes",
+      "threshold": 0.5,
+      "n_pairs": 66,
+      "recall_on_cited_evidence": {
+        "n": 22,
+        "said_yes": 22,
+        "yes_rate": 1.0,
+        "ci95": [
+          0.851,
+          1.0
+        ]
+      },
+      "false_yes_on_unrelated": {
+        "n": 22,
+        "said_yes": 22,
+        "yes_rate": 1.0,
+        "ci95": [
+          0.851,
+          1.0
+        ]
+      },
+      "yes_on_uncited_top_keyword_match": {
+        "n": 22,
+        "said_yes": 22,
+        "yes_rate": 1.0,
+        "ci95": [
+          0.851,
+          1.0
+        ]
+      },
+      "balanced_accuracy_reliable_labels": 0.5,
+      "pairwise_cited_beats_unrelated": 0.5,
+      "pairwise_cited_beats_top_uncited": 0.5,
+      "timing": {
+        "per_pair_mean_s": 0.0,
+        "total_s": 0.0
+      },
+      "tokens_total": null,
+      "energy": null,
+      "run": "judge-reg-always-yes",
+      "calibration": {
+        "n": 44,
+        "brier": 0.5,
+        "ece_5bin": 0.5
+      }
+    },
+    {
+      "task": "reg",
+      "tag": "gptoss20b-local-ref",
+      "mode": "generate",
+      "threshold": 0.5,
+      "n_pairs": 66,
+      "recall_on_cited_evidence": {
+        "n": 22,
+        "said_yes": 14,
+        "yes_rate": 0.636,
+        "ci95": [
+          0.43,
+          0.803
+        ]
+      },
+      "false_yes_on_unrelated": {
+        "n": 22,
+        "said_yes": 1,
+        "yes_rate": 0.045,
+        "ci95": [
+          0.008,
+          0.218
+        ]
+      },
+      "yes_on_uncited_top_keyword_match": {
+        "n": 22,
+        "said_yes": 9,
+        "yes_rate": 0.409,
+        "ci95": [
+          0.233,
+          0.613
+        ]
+      },
+      "balanced_accuracy_reliable_labels": 0.795,
+      "pairwise_cited_beats_unrelated": 0.795,
+      "pairwise_cited_beats_top_uncited": 0.614,
+      "timing": {
+        "per_pair_mean_s": 0.531,
+        "total_s": 35.1
+      },
+      "tokens_total": 33088,
+      "energy": {
+        "available": true,
+        "seconds": 35.07,
+        "mean_system_w": 33.32,
+        "total_j": 1168.7,
+        "idle_w": 18.73,
+        "above_idle_j": 511.8
+      },
+      "run": "judge-reg-gptoss20b-local-ref",
+      "calibration": {
+        "n": 44,
+        "brier": 0.205,
+        "ece_5bin": 0.205
+      }
+    },
+    {
+      "task": "reg",
+      "trained_on": "iss",
+      "tag": "nomic137m-logreg",
+      "mode": "trained_logreg",
+      "weights": [
+        -3.248,
+        -0.426,
+        1.094,
+        3.931,
+        0.494
+      ],
+      "threshold": 0.21,
+      "n_pairs": 66,
+      "recall_on_cited_evidence": {
+        "n": 22,
+        "said_yes": 20,
+        "yes_rate": 0.909,
+        "ci95": [
+          0.722,
+          0.975
+        ]
+      },
+      "false_yes_on_unrelated": {
+        "n": 22,
+        "said_yes": 0,
+        "yes_rate": 0.0,
+        "ci95": [
+          0.0,
+          0.149
+        ]
+      },
+      "yes_on_uncited_top_keyword_match": {
+        "n": 22,
+        "said_yes": 13,
+        "yes_rate": 0.591,
+        "ci95": [
+          0.387,
+          0.767
+        ]
+      },
+      "balanced_accuracy_reliable_labels": 0.955,
+      "pairwise_cited_beats_unrelated": 0.955,
+      "pairwise_cited_beats_top_uncited": 0.818,
+      "timing": {
+        "per_pair_mean_s": 0.0581,
+        "total_s": 3.83
+      },
+      "tokens_total": null,
+      "energy": null,
+      "run": "judge-reg-nomic137m-logreg",
+      "calibration": {
+        "n": 44,
+        "brier": 0.077,
+        "ece_5bin": 0.116
+      }
+    },
+    {
+      "task": "reg",
+      "tag": "olmo2-1b-fewshot",
+      "mode": "logprob-fewshot",
+      "threshold": 0.5,
+      "n_pairs": 66,
+      "recall_on_cited_evidence": {
+        "n": 22,
+        "said_yes": 18,
+        "yes_rate": 0.818,
+        "ci95": [
+          0.615,
+          0.927
+        ]
+      },
+      "false_yes_on_unrelated": {
+        "n": 22,
+        "said_yes": 16,
+        "yes_rate": 0.727,
+        "ci95": [
+          0.518,
+          0.868
+        ]
+      },
+      "yes_on_uncited_top_keyword_match": {
+        "n": 22,
+        "said_yes": 19,
+        "yes_rate": 0.864,
+        "ci95": [
+          0.667,
+          0.953
+        ]
+      },
+      "balanced_accuracy_reliable_labels": 0.545,
+      "pairwise_cited_beats_unrelated": 0.636,
+      "pairwise_cited_beats_top_uncited": 0.591,
+      "timing": {
+        "per_pair_mean_s": 0.113,
+        "total_s": 7.5
+      },
+      "tokens_total": 46880,
+      "energy": null,
+      "run": "judge-reg-olmo2-1b-fewshot",
+      "calibration": {
+        "n": 44,
+        "brier": 0.303,
+        "ece_5bin": 0.253
+      }
+    },
+    {
+      "task": "reg",
+      "tag": "olmo2-1b",
+      "mode": "logprob",
+      "threshold": 0.5,
+      "n_pairs": 66,
+      "recall_on_cited_evidence": {
+        "n": 22,
+        "said_yes": 19,
+        "yes_rate": 0.864,
+        "ci95": [
+          0.667,
+          0.953
+        ]
+      },
+      "false_yes_on_unrelated": {
+        "n": 22,
+        "said_yes": 14,
+        "yes_rate": 0.636,
+        "ci95": [
+          0.43,
+          0.803
+        ]
+      },
+      "yes_on_uncited_top_keyword_match": {
+        "n": 22,
+        "said_yes": 13,
+        "yes_rate": 0.591,
+        "ci95": [
+          0.387,
+          0.767
+        ]
+      },
+      "balanced_accuracy_reliable_labels": 0.614,
+      "pairwise_cited_beats_unrelated": 0.636,
+      "pairwise_cited_beats_top_uncited": 0.591,
+      "timing": {
+        "per_pair_mean_s": 0.155,
+        "total_s": 10.2
+      },
+      "tokens_total": 26882,
+      "energy": null,
+      "run": "judge-reg-olmo2-1b",
+      "calibration": {
+        "n": 44,
+        "brier": 0.257,
+        "ece_5bin": 0.169
+      }
+    },
+    {
+      "task": "reg",
+      "tag": "olmo2-7b",
+      "mode": "logprob",
+      "threshold": 0.5,
+      "n_pairs": 66,
+      "recall_on_cited_evidence": {
+        "n": 22,
+        "said_yes": 12,
+        "yes_rate": 0.545,
+        "ci95": [
+          0.347,
+          0.731
+        ]
+      },
+      "false_yes_on_unrelated": {
+        "n": 22,
+        "said_yes": 1,
+        "yes_rate": 0.045,
+        "ci95": [
+          0.008,
+          0.218
+        ]
+      },
+      "yes_on_uncited_top_keyword_match": {
+        "n": 22,
+        "said_yes": 8,
+        "yes_rate": 0.364,
+        "ci95": [
+          0.197,
+          0.57
+        ]
+      },
+      "balanced_accuracy_reliable_labels": 0.75,
+      "pairwise_cited_beats_unrelated": 0.864,
+      "pairwise_cited_beats_top_uncited": 0.591,
+      "timing": {
+        "per_pair_mean_s": 0.209,
+        "total_s": 13.8
+      },
+      "tokens_total": 26882,
+      "energy": null,
+      "run": "judge-reg-olmo2-7b",
+      "calibration": {
+        "n": 44,
+        "brier": 0.225,
+        "ece_5bin": 0.234
+      }
+    },
+    {
+      "task": "reg",
+      "method": "bm25",
+      "tag": "",
+      "k": null,
+      "corpus_size": 37,
+      "metrics": {
+        "n": 22,
+        "hit@1": 0.727,
+        "hit@1_ci95": [
+          0.518,
+          0.868
+        ],
+        "hit@3": 0.864,
+        "hit@3_ci95": [
+          0.667,
+          0.953
+        ],
+        "hit@5": 0.909,
+        "mrr": 0.805,
+        "hit@1_count": 16,
+        "hit@3_count": 19
+      },
+      "timing": {
+        "index_s": 0.0,
+        "per_item_mean_s": 0.0,
+        "per_item_max_s": 0.0,
+        "total_s": 0.0
+      },
+      "tokens_total": null,
+      "energy": null,
+      "run": "reg-bm25"
+    },
+    {
+      "task": "reg",
+      "method": "embed",
+      "tag": "nomic137m",
+      "k": null,
+      "corpus_size": 37,
+      "metrics": {
+        "n": 22,
+        "hit@1": 0.773,
+        "hit@1_ci95": [
+          0.566,
+          0.899
+        ],
+        "hit@3": 0.864,
+        "hit@3_ci95": [
+          0.667,
+          0.953
+        ],
+        "hit@5": 0.909,
+        "mrr": 0.837,
+        "hit@1_count": 17,
+        "hit@3_count": 19
+      },
+      "timing": {
+        "index_s": 0.83,
+        "per_item_mean_s": 0.012,
+        "per_item_max_s": 0.018,
+        "total_s": 1.1
+      },
+      "tokens_total": null,
+      "energy": null,
+      "run": "reg-embed-nomic137m"
+    },
+    {
+      "task": "reg",
+      "method": "hybrid",
+      "tag": "nomic137m",
+      "k": null,
+      "corpus_size": 37,
+      "metrics": {
+        "n": 22,
+        "hit@1": 0.727,
+        "hit@1_ci95": [
+          0.518,
+          0.868
+        ],
+        "hit@3": 0.909,
+        "hit@3_ci95": [
+          0.722,
+          0.975
+        ],
+        "hit@5": 0.909,
+        "mrr": 0.818,
+        "hit@1_count": 16,
+        "hit@3_count": 20
+      },
+      "timing": {
+        "index_s": 0.43,
+        "per_item_mean_s": 0.012,
+        "per_item_max_s": 0.017,
+        "total_s": 0.7
+      },
+      "tokens_total": null,
+      "energy": null,
+      "run": "reg-hybrid-nomic137m"
+    },
+    {
+      "task": "reg",
+      "method": "judge",
+      "tag": "olmo2-1b",
+      "k": 5,
+      "corpus_size": 37,
+      "metrics": {
+        "n": 22,
+        "hit@1": 0.273,
+        "hit@1_ci95": [
+          0.132,
+          0.482
+        ],
+        "hit@3": 0.727,
+        "hit@3_ci95": [
+          0.518,
+          0.868
+        ],
+        "hit@5": 0.909,
+        "mrr": 0.513,
+        "hit@1_count": 6,
+        "hit@3_count": 16
+      },
+      "timing": {
+        "index_s": 2.65,
+        "per_item_mean_s": 0.61,
+        "per_item_max_s": 1.05,
+        "total_s": 16.1
+      },
+      "tokens_total": 46633,
+      "energy": null,
+      "run": "reg-judge-olmo2-1b"
+    },
+    {
+      "task": "reg",
+      "method": "judge",
+      "tag": "olmo2-7b",
+      "k": 5,
+      "corpus_size": 37,
+      "metrics": {
+        "n": 22,
+        "hit@1": 0.455,
+        "hit@1_ci95": [
+          0.269,
+          0.653
+        ],
+        "hit@3": 0.818,
+        "hit@3_ci95": [
+          0.615,
+          0.927
+        ],
+        "hit@5": 0.909,
+        "mrr": 0.662,
+        "hit@1_count": 10,
+        "hit@3_count": 18
+      },
+      "timing": {
+        "index_s": 0.58,
+        "per_item_mean_s": 1.062,
+        "per_item_max_s": 1.484,
+        "total_s": 24.0
+      },
+      "tokens_total": 46633,
+      "energy": null,
+      "run": "reg-judge-olmo2-7b"
+    },
+    {
+      "task": "reg",
+      "method": "random",
+      "tag": "",
+      "k": null,
+      "corpus_size": 37,
+      "metrics": {
+        "n": 22,
+        "hit@1": 0.0,
+        "hit@1_ci95": [
+          0.0,
+          0.149
+        ],
+        "hit@3": 0.091,
+        "hit@3_ci95": [
+          0.025,
+          0.278
+        ],
+        "hit@5": 0.136,
+        "mrr": 0.107,
+        "hit@1_count": 0,
+        "hit@3_count": 2
+      },
+      "timing": {
+        "index_s": 0.0,
+        "per_item_mean_s": 0.0,
+        "per_item_max_s": 0.0,
+        "total_s": 0.0
+      },
+      "tokens_total": null,
+      "energy": null,
+      "run": "reg-random"
+    },
+    {
+      "task": "sections",
+      "method": "reference",
+      "tag": "claude-draft-2026-04",
+      "metrics": {
+        "n": 22,
+        "hit@1": 0.636,
+        "hit@1_ci95": [
+          0.43,
+          0.803
+        ],
+        "hit@3": 0.682,
+        "hit@3_ci95": [
+          0.473,
+          0.836
+        ],
+        "hit@5": 0.682,
+        "mrr": 0.659,
+        "hit@1_count": 14,
+        "hit@3_count": 15
+      },
+      "items_without_section_cite": 1,
+      "run": "reg-ref-claude-draft-2026-04"
+    },
+    {
+      "task": "sections",
+      "method": "reference",
+      "tag": "gptoss120b-hosted-v2.2.0",
+      "metrics": {
+        "n": 22,
+        "hit@1": 0.5,
+        "hit@1_ci95": [
+          0.307,
+          0.693
+        ],
+        "hit@3": 0.682,
+        "hit@3_ci95": [
+          0.473,
+          0.836
+        ],
+        "hit@5": 0.682,
+        "mrr": 0.591,
+        "hit@1_count": 11,
+        "hit@3_count": 15
+      },
+      "items_without_section_cite": 4,
+      "run": "reg-ref-gptoss120b-hosted-v2.2.0"
+    },
+    {
+      "task": "sections",
+      "method": "reference",
+      "tag": "gptoss120b-hosted-v2.5.0",
+      "metrics": {
+        "n": 22,
+        "hit@1": 0.455,
+        "hit@1_ci95": [
+          0.269,
+          0.653
+        ],
+        "hit@3": 0.636,
+        "hit@3_ci95": [
+          0.43,
+          0.803
+        ],
+        "hit@5": 0.636,
+        "mrr": 0.545,
+        "hit@1_count": 10,
+        "hit@3_count": 14
+      },
+      "items_without_section_cite": 5,
+      "run": "reg-ref-gptoss120b-hosted-v2.5.0"
+    }
+  ]
+}

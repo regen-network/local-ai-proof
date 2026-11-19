@@ -1,0 +1,10 @@
+;; llm-net-deny.sb — OS-enforced network deny for local inference.
+;; Verified on macOS 27.0.1 (2026-10-10): egress and DNS refused; loopback serves.
+;; DO NOT use (allow network* (local ip "localhost:*")) — it leaks outbound on macOS 27.
+;; SBPL cannot pin the bind address (only "localhost" or "*"), so serve.sh binds
+;; 127.0.0.1 explicitly and verifies a loopback-only listener with lsof.
+(version 1)
+(allow default)
+(deny network*)
+(allow network-bind network-inbound (local ip "localhost:*"))
+(allow network-outbound (remote ip "localhost:*"))

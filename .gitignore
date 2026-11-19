@@ -1,0 +1,19 @@
+# Real review material and anything derived from it never enters the repo.
+private/
+.vendor/
+synthetic/runs/
+__pycache__/
+*.pyc
+.DS_Store
+*.gguf
+
+# Superseded drafts stay local (kept, never overwritten)
+00-assessment-v0.1.md
+00-assessment-v0.2.md
+01-results-v0.1.md
+02-roadmap-fully-local-v0.1.md
+02-roadmap-fully-local-v0.2.md
+results/summary-v0.1.json
+
+# All versioned working drafts stay local; the repo carries ASSESSMENT/RESULTS/ROADMAP
+[0-9][0-9]-*-v*.md
